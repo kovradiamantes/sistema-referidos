@@ -25,3 +25,19 @@ async function recargar(){
 
   alert("Recarga registrada")
 }
+
+
+async function pagar(){
+
+  const usuarioID = prompt("Ingrese ID interno del streamer a pagar")
+
+  const res = await postData({
+    accion:"pagarComision",
+    usuarioID
+  })
+
+  if(res.status){
+    alert("Pagado: "+res.pagado+" diamantes")
+  }
+
+}
