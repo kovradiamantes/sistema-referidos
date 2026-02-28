@@ -15,7 +15,7 @@ async function crearUsuario(){
 
 async function recargar(){
 
-  await postData({
+  let res = await postData({
     accion:"registrarRecarga",
     cliente:cliente.value,
     monto:monto.value,
@@ -23,7 +23,11 @@ async function recargar(){
     diamantes:diam.value
   })
 
-  alert("Recarga registrada")
+  if(res.status){
+    alert("Recarga registrada correctamente")
+  }else{
+    alert("Error: Cliente no encontrado o no genera comisión")
+  }
 }
 
 
