@@ -1,0 +1,31 @@
+<h2>Registrar Usuario</h2>
+
+<input id="nombre" placeholder="Nombre">
+<select id="tipo">
+<option value="cliente">Cliente</option>
+<option value="streamer">Streamer</option>
+</select>
+
+<input id="origen" placeholder="Streamer ID">
+<input id="directo" placeholder="Padre ID">
+<input id="username" placeholder="Username">
+<input id="password" placeholder="Password">
+
+<button onclick="crearUsuario()">Registrar</button>
+
+<hr>
+
+<h2>Registrar Recarga</h2>
+
+<input id="cliente" placeholder="Cliente ID">
+<input id="monto" placeholder="Monto">
+<select id="moneda">
+<option value="USD">USD</option>
+<option value="PEN">PEN</option>
+</select>
+<input id="diam" placeholder="Diamantes">
+
+<button onclick="recargar()">Registrar Recarga</button>
+
+<script src="js/api.js"></script>
+<script src="js/admin.js"></script>
